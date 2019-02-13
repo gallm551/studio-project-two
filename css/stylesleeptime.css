@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(32, 30, 44);
+    font-size: 14px;
+    height: auto;
+    font-family: 'Major Mono Display', monospace;
+}
+
+div {
+    margin: 0;
+    padding: 0;
+}
+
+div.circle {
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    max-width: 100%;
+    border-radius: 50%;
+    float: left;
+    background: rgba(6, 180, 248, 0.301);
+    text-align: center;
+    vertical-align: middle;
+    color: aliceblue;
+    font-family: 'Poiret One', cursive;
+}
+
+div.pictures {
+    margin: 10px;
+    float: left;
+    display: inline-block;
+}
+
+div.sound {
+    margin: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    width: auto;
+}
+
+
