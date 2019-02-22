@@ -1,0 +1,66 @@
+body {
+  height:2600px;
+  background-color: hsl(225, 78%, 9%);
+  background-image: url(../images/space2.jpg);
+  background-position: center;
+  background-repeat: repeat;
+  background-size: auto;
+}
+
+#viewport {
+  position:fixed;
+  perspective: 150px;
+  perspective-origin: 30% 50%;
+  border: 0;
+  color: whitesmoke;
+  height: 700px;
+  width: 400px;
+  left: 50%;
+  margin-left: -50%;
+}
+  
+.box {
+  position:absolute;
+  width:150px;
+  height:100px;
+  left:50%;
+  top:50%;
+  margin-left:-50px;
+  margin-top:-50px;
+}
+
+#a {
+  background-color: hsl(157, 86%, 37%);
+}
+
+#b {
+  background-color:hsl(128, 100%, 50%); 
+  font-family: 'Major Mono Display', monospace;
+  font-size: 10px;
+  object-fit: cover;
+}
+
+#c {
+  background-color:hsl(273, 100%, 47%);
+  font-family: 'Oswald', sans-serif;
+  font-size: 10px;
+  object-fit: cover;
+}
+
+#d {
+  padding: 5px;
+  background-color:hsl(310, 100%, 47%);
+  font-family: 'Major Mono Display', monospace;
+  font-size: 10px;
+  object-fit: cover;
+}
+
+
+h1.title {
+  color: hsl(0, 100%, 47%);
+  position: absolute;
+  right: 610px;
+  bottom: 500px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 50px;
+}

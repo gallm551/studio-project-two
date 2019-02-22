@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Time to Sleep!</title>
+        <link href="css/normalize.css" type="text/css" rel="stylesheet"/>
+        <link href="css/style-two.css" type="text/css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+    </head>
+    
+    <body onmouseenter="playAudio()">
+        <div id="viewport">
+            
+            <div class="box" id="a">
+                <img src="images/surreal.jpg">
+            </div>
+
+            <div class="box" id="b">
+                <img src="images/mall.jpg">
+            </div>
+        
+            <div class="box" id="C">
+                    <img src="images/pristine.jpg">
+                </div>
+
+            <div class="box" id="d">
+                You just woke up from a nap.
+            </div>
+            
+        </div>
+    
+        <div class="sound">
+            <audio autoplay loop id="audioID">
+                <source src="audio/weightless.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+        
+        <script type="text/javascript" src="java/java2.js"></script>
+        <script>
+                var scrollPosition = document.body.scrollTop,
+                    boxPositions = [-350, -100, 50, 50];
+                function scrollDelta() {
+                  var newScrollPosition = document.body.scrollTop,
+                      delta = newScrollPosition - scrollPosition;
+                  scrollPosition = document.body.scrollTop;
+                  return delta;
+                }
+                function moveCamera() {
+                  var boxes = document.getElementsByClassName("box"),
+                      delta = scrollDelta();
+                      console.log(delta);
+                  for (var i=0,l=boxes.length;i<l;i++) {
+                    boxPositions[i] += parseInt(delta);
+                    boxes[i].style["transform"] = "translateZ("+boxPositions[i]+"px)";
+                  }
+                }
+                window.addEventListener("scroll", moveCamera, false);
+                //
+                //
+                //Defining variable based on unique ID
+
+                var audio1 = document.getElementById("audioID");
+
+                //Example of an HTML Audio/Video Method
+
+                function playAudio() {
+                audio1.play();
+                }
+        </script>
+    </body>
+</html>

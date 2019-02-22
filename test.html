@@ -1,0 +1,110 @@
+<html>
+<head>
+  <title>Scrolling along the Z-Axis</title>
+  <!--
+  Example from http://eng.wealthfront.com/2012/03/scrolling-z-axis-with-css-3d-transforms.html
+  Assumes browser window is sized at a height of 400px (the size of the black box).
+  -->
+  <style>
+  body{
+    height:2600px;
+    background-color: hsl(53, 100%, 51%);
+  }
+  #viewport {
+   position:fixed;
+   perspective:100px;
+   perspective-origin:30% 40%;
+   border: 2px;
+   color: transparent;
+   height: 700px;
+   width: 400px;
+   left:50%;
+   margin-left:-200px;
+  }
+.box {
+   position:absolute;
+   width:100px;
+   height:100px;
+   left:50%;
+   top:50%;
+   margin-left:-50px;
+   margin-top:-50px;
+ }
+ #a {
+   background-color:hsl(0, 100%, 47%);
+ }
+ #b {
+   background-color:hsl(0, 100%, 47%);
+    
+  font-family: 'Oswald', sans-serif;
+ font-size: 10px;
+ }
+ #c {
+ background-color:hsl(0, 100%, 47%);
+  font-family: 'Oswald', sans-serif;
+ font-size: 10px;
+ }
+ #d {
+  background-color:hsl(0, 100%, 47%);
+  
+  
+  font-family: 'Oswald', sans-serif;
+ font-size: 10px;
+}
+h1.title {
+    color: hsl(0, 100%, 47%);
+    position: absolute;
+    right: 610px;
+    bottom: 500px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+}
+ 
+ } 
+  </style>
+</head>
+<body>
+
+<h1 class="title">Fate Maze</h1>
+
+
+  <div id="viewport">
+    
+    <div class="box" id="b">
+         <a href="index30.html">You've walked 10 blocks from your dorm, you're 3 blocks away from making it to class with 2 min to spare, but your forgot your laptop.</a>
+      
+    </div>
+    <div class="box" id="c">
+
+        <a href="index21.html">Itʼs 40 degrees outside, you wanna go to the grocery store before it closes, but your friend is out borrowing your good jacket.</a>
+     
+    </div>
+    <div class="box" id="d">
+
+        <a href="index11.html">Class starts in 30 min, you just woke up from a nap, and all your shirts are wrinkly.</a>
+    
+    </div>    
+  </div>
+  
+  <script>
+    var scrollPosition = document.body.scrollTop,
+        boxPositions = [-350, -100, 50, 50];
+    function scrollDelta() {
+      var newScrollPosition = document.body.scrollTop,
+          delta = newScrollPosition - scrollPosition;
+      scrollPosition = document.body.scrollTop;
+      return delta;
+    }
+    function moveCamera() {
+      var boxes = document.getElementsByClassName("box"),
+          delta = scrollDelta();
+          console.log(delta);
+      for (var i=0,l=boxes.length;i<l;i++) {
+        boxPositions[i] += parseInt(delta);
+        boxes[i].style["transform"] = "translateZ("+boxPositions[i]+"px)";
+      }
+    }
+    window.addEventListener("scroll", moveCamera, false);
+ </script>
+</body>
+</html>

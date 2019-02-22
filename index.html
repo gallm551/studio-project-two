@@ -4,28 +4,33 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Stay Awake</title>
-        <link href="css/style.css" type="text/css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <title>Stay Awake!</title>
+        <link href="css/style.css" type="text/css" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
-       <!-- Insert font link href here-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     </head>
         
-    <body>
+    <body onmouseenter="playAudio()">
         <div class="center">
             <h1> It's not time to sleep yet! </h1>
-            <p> Come back at 8:30pm.</p>
-
-            <div class="sound">
-                <audio autoplay loop>
-                    <source src="audio/sleeper.mp3" type="audio/mpeg">
-                </audio>
+            <p> Come back at 9:00pm.</p>
+        
+            <div class="define">
+                <h4> a·wake </h4>
+                <h5>/əˈwāk/ <em>verb</em></h5>
+                <h6> 1. <br> stop sleeping; wake from sleep. <br>
+                "she awoke to find the streets covered in snow" <br>
+                synonyms: wake (up), awaken, stir, come to, come around, show life, return to the land of the living. <br>
+                <div class="example">"she awoke late the following morning"</div> 
+                </h6>
             </div>
         </div>
-    
-        <div class="volume-up">
-            <img src="images/volume_up.png" alt="click this for sound" style="width:75px;height:75px;">
+
+        <div class="sound">
+            <audio autoplay loop id="audioID">
+                <source src="audio/silence.mp3" type="audio/mpeg"></audio>
         </div>
-        
+    
+        <script type="text/javascript" src="java/java.js"></script>
     </body>
 </html>
