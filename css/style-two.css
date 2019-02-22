@@ -5,62 +5,76 @@ body {
   background-position: center;
   background-repeat: repeat;
   background-size: auto;
+  font-family: 'Major Mono Display', monospace;
 }
 
 #viewport {
-  position:fixed;
-  perspective: 150px;
-  perspective-origin: 30% 50%;
-  border: 0;
-  color: whitesmoke;
-  height: 700px;
-  width: 400px;
+  position: fixed;
+  perspective: 100px;
+  perspective-origin: 50% 50%;
+  height: 100vh;
+  width: 100vw;
   left: 50%;
-  margin-left: -50%;
+  margin-left: -50vw;
 }
   
 .box {
-  position:absolute;
-  width:150px;
-  height:100px;
-  left:50%;
-  top:50%;
-  margin-left:-50px;
+  margin-left:-100px;
   margin-top:-50px;
+  padding: 0;
+  top:50%;
+  left:50%;
+  width: 200px;
+  height: 200px;
+  position:absolute;
+  color: whitesmoke;
+  background-color: transparent;
 }
 
-#a {
-  background-color: hsl(157, 86%, 37%);
+#a:hover {
+  opacity: 1;
 }
 
-#b {
-  background-color:hsl(128, 100%, 50%); 
-  font-family: 'Major Mono Display', monospace;
-  font-size: 10px;
-  object-fit: cover;
+#b:hover { 
+  opacity: 0.5;
 }
 
-#c {
-  background-color:hsl(273, 100%, 47%);
-  font-family: 'Oswald', sans-serif;
-  font-size: 10px;
-  object-fit: cover;
+#c:hover {
+  opacity: 0.5;
 }
 
-#d {
+#d:hover {
   padding: 5px;
-  background-color:hsl(310, 100%, 47%);
-  font-family: 'Major Mono Display', monospace;
-  font-size: 10px;
-  object-fit: cover;
+  opacity: 0.5;
 }
 
-
-h1.title {
-  color: hsl(0, 100%, 47%);
-  position: absolute;
-  right: 610px;
-  bottom: 500px;
-  font-family: 'Oswald', sans-serif;
-  font-size: 50px;
+img {
+  width: 100%;
+  height: auto;
 }
+
+/*
+.one {
+  animation-name: phaseme;
+  animation-duration: 5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: ease-out;
+}
+
+@keyframes phaseme {
+  0%, 20% {
+    opacity: 0;
+    background-color: aquamarine;
+  }
+  30% {
+    background-color: aqua;
+  }
+  100% {
+    opacity: 1;
+    background-color: yellowgreen;
+    transform: translate(0,-300px);
+  }
+}
+*/ 

@@ -18,11 +18,10 @@ boxes[i].style["transform"] = "translateZ("+boxPositions[i]+"px)";
 }
 window.addEventListener("scroll", moveCamera, false);
 //
-//Defining variable based on unique ID
+// Defining variable based on unique ID for Audio 
 
 var audio1 = document.getElementById("audioID");
 
-//Example of an HTML Audio/Video Method
 
 function playAudio() {
   audio1.play();
